@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎨 Stick O Stick
 
-## Getting Started
+A modern **full-stack e-commerce web application** where users can purchase **high-resolution developer stickers**.  
+Built as a **real-time project** using **Next.js**, **Stripe**, and a custom styling system called **Fanta CSS**.
 
-First, run the development server:
+This project focuses on clean UI, smooth checkout experience, and production-ready architecture.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Features
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- 🛒 Browse and purchase high-quality developer stickers  
+- 💳 Secure checkout using **Stripe Payment Gateway**  
+- 🎨 Custom-designed UI using **Fanta CSS**  
+- ⚡ Fast and optimized pages with **Next.js**  
+- 📱 Fully responsive across devices  
+- 🧾 Real-time price calculation and cart updates  
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🛠️ Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+- **Frontend / Full Stack Framework:** Next.js  
+- **Styling:** Custom CSS framework – *Fanta CSS*  
+- **Payments:** Stripe  
+- **Deployment Ready:** Production-friendly setup  
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🎨 Styling – Fanta CSS
 
-## Deploy on Vercel
+This project uses **Fanta CSS**, a custom CSS system focused on:
+- Clean typography  
+- Minimal UI components  
+- Consistent spacing and layout  
+- Easy customization  
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+All styles are written manually without external UI libraries.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 💳 Payments – Stripe Integration
+
+- Secure card payments handled via **Stripe**
+- Client-side checkout with Stripe APIs
+- Reliable and scalable payment flow used in real-world applications
+
+---
+
+## 📦 Project Purpose
+
+This project was built as a **worthy full-stack real-time application** to:
+- Demonstrate end-to-end product development
+- Showcase payment gateway integration
+- Practice scalable UI and clean architecture
+- Serve as a strong portfolio and resume project
+
+---
+
+## 🧠 What I Learned
+
+- Implementing secure payment workflows using Stripe  
+- Structuring a full-stack Next.js application  
+- Designing a custom CSS system from scratch  
+- Building a production-style e-commerce flow  
+
+---
+
+## 📬 Contact
+
+If you’d like to discuss this project or collaborate:
+
+- GitHub: https://github.com/G-Siva
+- LinkedIn: https://linkedin.com/in/sivasubramanian19
+
+---
+
+⭐ If you like this project, consider giving it a star!
