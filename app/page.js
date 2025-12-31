@@ -3,22 +3,17 @@ import Products from "@/components/Products";
 
 async function getProducts() {
     try {
-        // Relative URL — automatically uses localhost:3000 locally and your Vercel domain in production
-        const response = await fetch(`${process.env.NEXT_PUBLIC_VERCEL_URL || 'http://localhost:3000'}/api/products`, {
-            // Optional: disable cache if you want fresh data on every request
-            // cache: 'no-store',
-            next: { revalidate: 60 }, // Revalidate every 60 seconds (recommended)
+        const response = await fetch('/api/products', {
+            next: { revalidate: 60 },
         });
 
-        if (!response.ok) {
-            throw new Error(`Failed to fetch products: ${response.status}`);
-        }
+        if (!response.ok) return [];
 
         const products = await response.json();
         return products;
     } catch (err) {
-        console.error('Error fetching products:', err);
-        return []; // Return empty array so page doesn't crash
+        console.error('Product fetch error:', err);
+        return [];
     }
 }
 
