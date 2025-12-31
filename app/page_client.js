@@ -3,49 +3,50 @@ import ImageBanner from "@/components/ImageBanner";
 import Products from "@/components/Products";
 import { useEffect, useState } from "react";
 
-
-// export async function getProducts() {
-//   // what we'd do if we could deploy a proper backend
-//   const baseURL = process.env.NEXT_PUBLIC_BASE_URL
-//   const response = await fetch(baseURL + '/api/products')
-//   const products = await response.json()
-//   return products
-// }
-
-export default function Home(props) {
-  const [products, setProducts] = useState([])
-  // const products = await getProducts()
-
-  let planner = null
-  let stickers = []
-
-
-  for (let product of products) {
-    if (product.name === 'Medieval Dragon Month Planner') {
-      planner = product
-      continue
-    }
-    stickers.push(product)
-  }
+export default function Home() {
+  const [products, setProducts] = useState([]);
+  const [planner, setPlanner] = useState(null);
+  const [stickers, setStickers] = useState([]);
 
   useEffect(() => {
     async function fetchProducts() {
       try {
-        const baseURL = process.env.NEXT_PUBLIC_BASE_URL
-        const response = await fetch(baseURL + '/api/products')
-        const productsData = await response.json()
-        setProducts(productsData)
+        // Just use relative URL — works both locally and on Vercel
+        const response = await fetch('/api/products');
+
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const productsData = await response.json();
+        setProducts(productsData);
+
+        // Separate planner and stickers
+        let foundPlanner = null;
+        const foundStickers = [];
+
+        for (let product of productsData) {
+          if (product.name === 'Medieval Dragon Month Planner') {
+            foundPlanner = product;
+          } else {
+            foundStickers.push(product);
+          }
+        }
+
+        setPlanner(foundPlanner);
+        setStickers(foundStickers);
+
       } catch (err) {
-        console.log(err.message)
+        console.error('Failed to fetch products:', err.message);
+        // Optional: show error UI to user
       }
     }
 
-    fetchProducts()
-  }, [])
-
+    fetchProducts();
+  }, []);
 
   return (
-    < >
+    <>
       <ImageBanner />
       <section>
         <Products planner={planner} stickers={stickers} />

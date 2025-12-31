@@ -43,7 +43,7 @@ export default function RootLayout({ children }) {
               <div className="links-container">
                 <div>
                   <h3>Siva Subramanian</h3>
-                  <Link target="_blank" href={'/'}>Siva's Hub</Link>
+                  <Link target="_blank" href={'/'}>My Hub</Link>
                   <Link target="_blank" href={'/'}>Roadmap</Link>
                 </div>
                 <div>
